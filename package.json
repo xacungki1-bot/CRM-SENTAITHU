@@ -1,0 +1,19 @@
+{
+  "name": "stt-crm-mkt",
+  "version": "1.0.0",
+  "description": "STT Marketing CRM — Hệ thống quản lý lead cho 13 chi nhánh Sen Tài Thu",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "import": "node scripts/import-excel.js",
+    "setup": "npm install && node scripts/init-db.js && node scripts/import-excel.js && echo '✅ Setup hoàn tất! Chạy: npm start'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "sql.js": "^1.14.1",
+    "xlsx": "^0.18.5"
+  }
+}

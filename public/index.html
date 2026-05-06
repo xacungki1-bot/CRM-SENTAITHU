@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STT Marketing CRM 🌸</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+<div id="app">
+
+  <!-- ── Sidebar ── -->
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">🌸</div>
+      <div>
+        <div class="sidebar-logo-text">STT Marketing CRM</div>
+        <div class="sidebar-logo-sub">Sen Tài Thu Group</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group-label">Tổng quan</div>
+      <a class="nav-item" data-page="dashboard">
+        <span class="icon">📊</span> Dashboard
+      </a>
+
+      <div class="nav-group-label">Quản lý Lead</div>
+      <a class="nav-item" data-page="leads">
+        <span class="icon">📋</span> Danh sách Lead
+      </a>
+      <a class="nav-item" data-page="profile" style="display:none" id="nav-profile">
+        <span class="icon">👤</span> Hồ sơ khách
+      </a>
+
+      <div class="nav-group-label">Phân tích</div>
+      <a class="nav-item" data-page="stats">
+        <span class="icon">📈</span> Báo cáo & Thống kê
+      </a>
+      <a class="nav-item" data-page="changelog">
+        <span class="icon">📝</span> Nhật ký thay đổi
+      </a>
+
+      <div class="nav-group-label">Hệ thống</div>
+      <a class="nav-item" data-page="settings">
+        <span class="icon">⚙️</span> Cài đặt
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-avatar" id="sidebar-user-avatar">A</div>
+      <div>
+        <div class="user-name" id="sidebar-user-name">Nhân viên</div>
+        <div class="user-role" id="sidebar-user-role">staff</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <div id="main">
+
+    <!-- Topbar -->
+    <header id="topbar">
+      <div class="flex-center gap-8">
+        <span class="topbar-title" id="page-title">Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <button class="btn btn-outline btn-sm" id="btn-export">📥 Xuất Excel</button>
+        <button class="btn btn-primary btn-sm" onclick="openCreateModal()">+ Thêm Lead</button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div id="content">
+
+      <!-- Dashboard -->
+      <div id="page-dashboard" class="page" style="display:none"></div>
+
+      <!-- Leads List -->
+      <div id="page-leads" class="page" style="display:none"></div>
+
+      <!-- Profile -->
+      <div id="page-profile" class="page" style="display:none"></div>
+
+      <!-- Stats -->
+      <div id="page-stats" class="page" style="display:none"></div>
+
+      <!-- Changelog -->
+      <div id="page-changelog" class="page" style="display:none"></div>
+
+      <!-- Settings -->
+      <div id="page-settings" class="page" style="display:none"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<!-- Scripts -->
+<script src="/js/app.js"></script>
+<script src="/js/dashboard.js"></script>
+<script src="/js/leads.js"></script>
+<script src="/js/stats.js"></script>
+</body>
+</html>
